@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "error": "500 Internal Server Error (ID: 1)",
+        "failed_at_attempt": 3
+    },
+    {
+        "id": 4,
+        "error": "500 Internal Server Error (ID: 4)",
+        "failed_at_attempt": 3
+    },
+    {
+        "id": 9,
+        "error": "500 Internal Server Error (ID: 9)",
+        "failed_at_attempt": 3
+    }
+]
