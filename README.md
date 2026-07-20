@@ -1,7 +1,7 @@
 실습1. 대용량 로그 스트리밍 집계
 STEP 0. 데이터 형태 확인
 <p align="left">
-    <img src="exec/img/0001.jpg" width="49%" alt="1-1">
+    <img src="exec/0001.jpg" width="49%" alt="1-1">
 </p>
 
 STEP 1. 파일 -> 딕셔너리 제너레이터
