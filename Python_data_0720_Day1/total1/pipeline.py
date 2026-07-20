@@ -92,11 +92,11 @@ def transform(raw: list[dict]) -> tuple[list[Product], list[dict]]:
 
 def load(valid: list[Product], out_dir=OUTPUT_DIR) -> pd.DataFrame:
     target_dir = Path(out_dir)
-    target_dir.mkdir(parents=True, exist_ok=True)  # ✅ out_dir 경로 생성
+    target_dir.mkdir(parents=True, exist_ok=True)  # 
 
     df = pd.DataFrame([v.model_dump() for v in valid])
-    df.to_csv(target_dir / "products.csv", index=False)      # ✅ out_dir 기준 저장
-    df.to_parquet(target_dir / "products.parquet", index=False)  # ✅ out_dir 기준 저장
+    df.to_csv(target_dir / "products.csv", index=False)      # 
+    df.to_parquet(target_dir / "products.parquet", index=False)  # 
     return df
 
 
@@ -105,8 +105,8 @@ def save_dead_letters(dead_letters: list[dict], out_dir=OUTPUT_DIR):
         return
 
     target_dir = Path(out_dir)
-    target_dir.mkdir(parents=True, exist_ok=True)  # ✅ out_dir 경로 생성
-    file_path = target_dir / "dead_letter.json"     # ✅ out_dir 기준 저장
+    target_dir.mkdir(parents=True, exist_ok=True)  # 
+    file_path = target_dir / "dead_letter.json"     # 
 
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(dead_letters, f, ensure_ascii=False, indent=4)
