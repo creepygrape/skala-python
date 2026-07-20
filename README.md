@@ -6,27 +6,27 @@ STEP 0. 데이터 형태 확인
 
 STEP 1. 파일 -> 딕셔너리 제너레이터
 <p align="left">
-    <img src="exec/img/0002.jpg" width="49%" alt="1-2">
+    <img src="exec/0002.jpg" width="49%" alt="1-2">
 </p>
 
 STEP 2 + 3. 집계 코드 작성
 <p align="left">
-    <img src="exec/img/0003.jpg" width="49%" alt="1-3">
+    <img src="exec/0003.jpg" width="49%" alt="1-3">
 </p>
 
 STEP 4. 5xx 비율 계산
 <p align="left">
-    <img src="exec/img/0004.jpg" width="49%" alt="1-4">
+    <img src="exec/0004.jpg" width="49%" alt="1-4">
 </p>
 
 STEP 5. fold 패턴
 <p align="left">
-    <img src="exec/img/0005.jpg" width="49%" alt="1-5">
+    <img src="exec/0005.jpg" width="49%" alt="1-5">
 </p>
 
 STEP 6. 리포트 및 상위 IP 출력
 <p align="left">
-    <img src="exec/img/0006.jpg" width="49%" alt="1-6">
+    <img src="exec/0006.jpg" width="49%" alt="1-6">
 </p>
 
 ---
@@ -34,7 +34,7 @@ STEP 6. 리포트 및 상위 IP 출력
 실습2 . Pydantic v2 중첩 스키마 검증
 STEP 0  ·  오염 데이터 확인
 <p align="left">
-    <img src="exec/img/0007.jpg" width="49%" alt="2-1">
+    <img src="exec/0007.jpg" width="49%" alt="2-1">
 </p>
 - 7번 유저 : 나이가 음수값(-5)로 설정됨
 - 13번 유저 : 이메일 값이 "not-an-email"으로 형식을 벗어남
