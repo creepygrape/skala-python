@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "ok": false,
+    "error": "500 Internal Server Error (영구적 서버 오류)",
+    "failed_attempts": 3
+  },
+  {
+    "id": 4,
+    "ok": false,
+    "error": "500 Internal Server Error (영구적 서버 오류)",
+    "failed_attempts": 3
+  },
+  {
+    "id": 9,
+    "ok": false,
+    "error": "500 Internal Server Error (영구적 서버 오류)",
+    "failed_attempts": 3
+  }
+]
