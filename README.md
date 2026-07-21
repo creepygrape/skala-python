@@ -8,8 +8,12 @@
 1. [실습 1. 대용량 로그 스트리밍 집계](#실습-1-대용량-로그-스트리밍-집계)
 2. [실습 2. Pydantic v2 중첩 스키마 검증](#실습-2-pydantic-v2-중첩-스키마-검증)
 3. [실습 3. asyncio 기반 비동기 수집기](#실습-3-asyncio-기반-비동기-수집기)
-4. [종합 실습 1. 비동기 ETL 파이프라인](#종합-실습-1-비동기-etl-파이프라인)
-5. [추가 과제](#추가-과제)
+4. [실습 4. Pandas 2.x 데이터 정제]
+5. [실습 5. Polars, DuckDB 성능 비교]
+6. [종합 실습 1. 비동기 ETL 파이프라인](#종합-실습-1-비동기-etl-파이프라인)
+7. [종합 실습 2. EDA + 통계 + ML 파이프라인]
+8. [종합 실습 3. 분석 자동화 · 리포트 생성]
+9. [추가 과제](#추가-과제)
 
 ---
 
@@ -115,6 +119,46 @@
 
 ---
 
+## 실습 4. Pandas 2.x 데이터 정제
+### STEP 0. 데이터 진단
+<p align="left">
+    <img src="exec/0034.jpg" width="80%" alt="4-1">
+</p>
+### STEP 1 ~ 5. 데이터 타입 정규화, 결측/이상치 처리, groupby.agg 집계, pivot_table
+<p align="left">
+    <img src="exec/0035.jpg" width="80%" alt="4-2">
+</p>
+### STEP 6. 집계 3) merge — 다른 표와 결합
+<p align="left">
+    <img src="exec/0036.jpg" width="80%" alt="4-3">
+</p>
+
+---
+
+## 실습 5. Polars, DuckDB 성능 비
+### STEP 0. 비교할 '질의' 하나 선정
+- 세 엔진이 똑같은 일을 해야 비교 성립
+
+### STEP 1. 기준선 만들기 - Pandas
+<p align="left">
+    <img src="exec/0045.jpg" width="80%" alt="5-1">
+</p>
+
+### STEP 2. 기준선 만들기 - Polars Lazy - scan_csv + collect
+<p align="left">
+    <img src="exec/0046.jpg" width="80%" alt="5-1">
+</p>
+### STEP 3. DuckDB 버전 — SQL로 파일 직접 조회
+<p align="left">
+    <img src="exec/0047.jpg" width="80%" alt="5-1">
+</p>
+### STEP 4 ~ 5. ★ 결과 일치 검증 ★ +  벤치마크 표로 정리
+<p align="left">
+    <img src="exec/0036.jpg" width="80%" alt="5-1">
+</p>
+
+---
+
 ## 종합 실습 1. 비동기 ETL 파이프라인
 
 ### STEP 0 ~ 2. 테스트 점진적 접근(폴더 구조 > Transform > 테스트 코드)
@@ -151,6 +195,53 @@
 
 ---
 
+## 종합 실습 2. EDA + 통계 + ML 파이프라인
+### STEP 0. EDA
+<p align="left">
+    <img src="exec/0039.jpg" width="80%" alt="종합 2-1">
+</p>
+
+### STEP 1 ~ 3. 이탈 그룹 vs 잔류 그룹 비교 (가설 세우기), Plotly 로 시각화 → HTML 리포트, 통계 검정
+<p align="left">
+    <img src="exec/0040.jpg" width="80%" alt="종합 2-2">
+</p>
+- t-검정 p = 1.23e - 20
+- 카이제곱 p = 1.32e - 70
+
+### STEP 7. 평가 — 왜 정확도가 아니라 ROC-AUC 인가
+<p align="left">
+    <img src="exec/0041.jpg" width="80%" alt="종합 2-3">
+</p>
+- ROC-AUC = 0.667
+
+---
+
+## 종합 실습 3. 분석 자동화 · 리포트 생성
+### STEP 0. config.py
+<p align="left">
+    <img src="exec/0042.jpg" width="80%" alt="종합 3-1">
+</p>
+
+### STEP 3. 렌더링 — 데이터를 템플릿에 부어넣기
+<p align="left">
+    <img src="exec/0043.jpg" width="80%" alt="종합 3-2">
+</p>
+
+### STEP 4. 실행 방식 1) 경량 루프 (의존성 0)
+<p align="left">
+    <img src="exec/0044.jpg" width="80%" alt="종합 3-3">
+</p>
+
+### STEP 5. 실행 방식 2) schedule 라이브러리 (선언적)
+<p align="left">
+    <img src="exec/0048.jpg" width="80%" alt="종합 3-4">
+</p>
+
+### STEP 6. 실행 방식 3) OS cron (운영 환경 · 무인 실행)
+- cron 없어서 패스
+
+---
+
 ## 추가 과제
 
 ### 1. tracemalloc
@@ -166,3 +257,11 @@
 </p>
 
 - 실패 데이터 격리 및 json 기록
+
+### 3. 실습 4 확장 과제 — 정제 규칙을 함수로 만들고 테스트 붙이기
+<p align="left">
+    <img src="exec/0038.jpg" width="80%" alt="추가 1-3">
+</p>
+- advanced/cleaner.py
+- advanced/test_cleaner.py
+
