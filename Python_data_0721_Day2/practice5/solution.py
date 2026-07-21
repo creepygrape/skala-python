@@ -47,8 +47,8 @@ def duckDB():
     # duckdb -> duck 모듈명 통일
     res_duck = duck.sql(f"""
         SELECT event_type,
-              COUNT(amount) AS cnt,
-              AVG(amount)   AS avg
+            COUNT(amount) AS cnt,
+            AVG(amount)   AS avg
         FROM '{file_path}'
         GROUP BY event_type
         ORDER BY cnt DESC
