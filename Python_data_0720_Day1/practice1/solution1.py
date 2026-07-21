@@ -4,7 +4,7 @@ from functools import reduce
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
-DATA_DIR = BASE_DIR.parent / "data"
+DATA_DIR = BASE_DIR.parent.parent / "data"
 file_path = DATA_DIR / "web_logs.csv"
 
 

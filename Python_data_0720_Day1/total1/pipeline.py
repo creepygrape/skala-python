@@ -9,7 +9,7 @@ from models import Product
 # 1. 경로 기본 설정 (현재 파일 기준)
 # ==========================================
 BASE_DIR = Path(__file__).resolve().parent
-DATA_DIR = BASE_DIR / "data"
+DATA_DIR = BASE_DIR.parent.parent / "data"
 OUTPUT_DIR = BASE_DIR / "output"
 
 # ==========================================
