@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>일일 매출 리포트</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 30px;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+      .container {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+      h1 {
+        color: #2c3e50;
+        border-bottom: 3px solid #3498db;
+        padding-bottom: 10px;
+        margin-top: 0;
+      }
+      .timestamp {
+        color: #7f8c8d;
+        font-size: 0.9em;
+        margin-bottom: 25px;
+      }
+      .kpi-cards {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+      .card {
+        flex: 1;
+        background: #f1f8ff;
+        border-left: 5px solid #3498db;
+        padding: 15px;
+        border-radius: 6px;
+      }
+      .card-title {
+        font-size: 0.85em;
+        color: #555;
+        font-weight: bold;
+      }
+      .card-value {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-top: 5px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f4f6f7;
+        color: #333;
+      }
+      tr:hover {
+        background-color: #f9f9f9;
+      }
+      .amount {
+        text-align: right;
+      }
+      .number {
+        text-align: right;
+      }
+      .share-bar-container {
+        background-color: #e9ecef;
+        border-radius: 4px;
+        height: 10px;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        margin-top: 4px;
+      }
+      .share-bar {
+        background-color: #3498db;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📊 일일 매출 리포트</h1>
+      <div class="timestamp">⏰ 생성 시각: 2026-07-22 03:16:23</div>
+
+      <h2>📌 주요 지표 (KPI)</h2>
+      <div class="kpi-cards">
+        <div class="card">
+          <div class="card-title">총 매출</div>
+          <div class="card-value">
+            11,615,843,119원
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">총 주문 수</div>
+          <div class="card-value">
+            4,761건
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">평균 주문액</div>
+          <div class="card-value">
+            2,439,790.6원
+          </div>
+        </div>
+      </div>
+
+      <h2>🏆 카테고리별 매출 상세 현황 (Top N)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 8%; text-align: center">순위</th>
+            <th>카테고리</th>
+            <th style="text-align: right">총 매출액</th>
+            <th style="text-align: right">주문 건수</th>
+            <th style="text-align: right">건당 평균가</th>
+            <th style="width: 20%; text-align: right">매출 비중</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td style="font-weight: bold; text-align: center">
+              1
+            </td>
+            <td><strong>Beauty</strong></td>
+            <td class="amount">
+              2,713,793,428원
+            </td>
+            <td class="number">
+              960건
+            </td>
+            <td class="amount">
+              2,826,868원
+            </td>
+            <td class="number">
+              <div>23.4%</div>
+              <div class="share-bar-container">
+                <div
+                  class="share-bar"
+                  style="width: 23.4%;"
+                ></div>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td style="font-weight: bold; text-align: center">
+              2
+            </td>
+            <td><strong>Fashion</strong></td>
+            <td class="amount">
+              2,628,052,347원
+            </td>
+            <td class="number">
+              930건
+            </td>
+            <td class="amount">
+              2,825,863원
+            </td>
+            <td class="number">
+              <div>22.6%</div>
+              <div class="share-bar-container">
+                <div
+                  class="share-bar"
+                  style="width: 22.6%;"
+                ></div>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td style="font-weight: bold; text-align: center">
+              3
+            </td>
+            <td><strong>Electronics</strong></td>
+            <td class="amount">
+              2,486,970,309원
+            </td>
+            <td class="number">
+              946건
+            </td>
+            <td class="amount">
+              2,628,933원
+            </td>
+            <td class="number">
+              <div>21.4%</div>
+              <div class="share-bar-container">
+                <div
+                  class="share-bar"
+                  style="width: 21.4%;"
+                ></div>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td style="font-weight: bold; text-align: center">
+              4
+            </td>
+            <td><strong>Food</strong></td>
+            <td class="amount">
+              1,937,649,179원
+            </td>
+            <td class="number">
+              995건
+            </td>
+            <td class="amount">
+              1,947,386원
+            </td>
+            <td class="number">
+              <div>16.7%</div>
+              <div class="share-bar-container">
+                <div
+                  class="share-bar"
+                  style="width: 16.7%;"
+                ></div>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td style="font-weight: bold; text-align: center">
+              5
+            </td>
+            <td><strong>Home</strong></td>
+            <td class="amount">
+              1,849,377,856원
+            </td>
+            <td class="number">
+              930건
+            </td>
+            <td class="amount">
+              1,988,578원
+            </td>
+            <td class="number">
+              <div>15.9%</div>
+              <div class="share-bar-container">
+                <div
+                  class="share-bar"
+                  style="width: 15.9%;"
+                ></div>
+              </div>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
